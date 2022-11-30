@@ -1,5 +1,5 @@
 const digitalDecipher = (eMessage, key) => {
-    let input = eMessage;
+    let input = Array.from(eMessage);
 
     let numberFormat = input.every(element => {
         return typeof element === 'number';
