@@ -5,8 +5,7 @@ const digitalDecipher = (eMessage, key) => {
         return typeof element === 'number';
     })
 
-    key = Array.from(String(key));
-    key.forEach((element, index, key) => key[index] = parseInt(element));
+    key = Array.from(String(key), Number);
 
     if (!numberFormat) input.forEach((element, index, input) => input[index] = element.charCodeAt());
     else input.forEach((element, index, input) => input[index] = element+96);
