@@ -2,7 +2,7 @@ const digitalDecipher = (eMessage, key) => {
     let input = eMessage;
 
     let numberFormat = input.every(element => {
-        return typeof element === 'number'
+        return typeof element === 'number';
     })
 
     key = Array.from(String(key));
@@ -19,5 +19,6 @@ const digitalDecipher = (eMessage, key) => {
     return output.join('');
 }
 
-
+console.log(digitalDecipher([20, 12, 18, 30, 21], 1939));
+console.log(digitalDecipher([14, 30, 11, 1, 20, 17, 18, 18], 1990));
 console.log(digitalDecipher([6, 4, 1, 3, 9, 20], 100));
